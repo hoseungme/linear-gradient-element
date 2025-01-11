@@ -1,0 +1,48 @@
+{
+  "name": "linear-gradient-element",
+  "version": "0.0.0",
+  "description": "Set linear-gradient CSS background of your element, with transition animation, interpolation",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoseungme/linear-gradient-element.git"
+  },
+  "homepage": "https://github.com/hoseungme/linear-gradient-element#readme",
+  "keywords": [
+    "css",
+    "transition",
+    "animation",
+    "color",
+    "css-transition",
+    "css-animation",
+    "linear-gradient",
+    "linear-gradient-transition",
+    "linear-gradient-animation",
+    "linear-gradient-element"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --minify"
+  },
+  "author": "hoseungme",
+  "license": "MIT",
+  "devDependencies": {
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  }
+}
