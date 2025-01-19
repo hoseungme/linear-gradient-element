@@ -1,5 +1,5 @@
 import { RGB } from "./color";
-import { interpolate, interpolateInValue } from "./utils";
+import { interpolate, inverseInterpolate } from "./utils";
 
 export class LinearGradient {
   public readonly angle: number;
@@ -35,7 +35,7 @@ export class LinearGradient {
       .toOklab()
       .interpolate(
         nearestRightColorStop[0].toOklab(),
-        interpolateInValue(nearestLeftColorStop[1], nearestRightColorStop[1], point)
+        inverseInterpolate(nearestLeftColorStop[1], nearestRightColorStop[1], point)
       )
       .toRGB();
   }

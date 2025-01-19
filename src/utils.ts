@@ -12,6 +12,6 @@ export function interpolate(from: number, to: number, progress: number) {
   return from + (to - from) * progress;
 }
 
-export function interpolateInValue(from: number, to: number, value: number) {
+export function inverseInterpolate(from: number, to: number, value: number) {
   return (value - from) / (to - from);
 }
